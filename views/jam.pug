@@ -1,33 +1,33 @@
 extends layout
 block content
   h1= title
-  p Welcome to the dog 
+  p Welcome to the jam 
   div(class="container-fluid")
         div(class="row")
             -
-                let dog = [
+                let jam = [
                     {
-                        "breed": "Siberian husk",
-                        "age": 11,
-                        "name": "Liger"
+                        "name": "Strawberry",
+                        "cost": 11,
+                        "quantity": "twenty two"
                     },
                     {
-                        "breed": "Itaian greyhound",
-                        "age": 10,
-                        "name": "Bitch"
+                        "name": "mixed",
+                        "cost": 10,
+                        "quantity": "twenty"
                     },
                     {
-                        "breed": "Retriver",
-                        "age": 15,
-                        "name": "Tommy"
+                        "name": "grape",
+                        "cost": 15,
+                        "quantity": "twenty three"
                     },                   
                 ]
-            each v,index in dog
-                div(class="col-sm-2" onclick=`buy(${index})`) #{v.breed}
+            each v,index in jam
                 div(class="col-sm-2" onclick=`buy(${index})`) #{v.name}
-                div(class="col-sm-2" onclick=`buy(${index})`) #{v.age}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{v.cost}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{v.quantity}
   script.                
         function buy(intemNo)
         {
-              alert(`you purchased dog ${intemNo+1}`)
+              alert(`you purchased jam ${intemNo+1}`)
         }
